@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+	<title>Ejercicio21</title>
+	<script type="text/javascript">
+		var nombre, edad, media=0, sum=0, count=0;
+		while (count<3)
+		{
+			nombre =prompt("Introduce tu nombre: ");
+			edad=parseInt(prompt("Introduce tu edad: ",0));
+			while(edad<13||edad>100)
+			{
+				alert("edad erronea");
+				edad=parseInt(prompt("Introduce tu edad: ",0));
+			}
+			sum=sum + edad;
+			count=count + 1;	
+		}
+		media=sum/count;
+		alert("La media de edad es: "+media);
+	</script>
+</head> 
+</body>
+
+</body>
+</html>

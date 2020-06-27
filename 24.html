@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+	<title>Ejercicio24</title>
+	<script type="text/javascript">
+		var nombre, edad, media_edad=0, suma_edad=0, cuenta=0, sexo, hombre=0, mujer=0, nota, media_nota=0, suma_nota=0;
+		while (cuenta<3)
+		{
+			nombre=prompt("Introduce tu nombre: ");
+			edad=parseInt(prompt("Introduce tu edad: ",0));
+			while(edad<13||edad>100)
+			{
+				alert("edad erronea");
+				edad=parseInt(prompt("Introduce tu edad: ",0));
+			}
+			do
+			{
+				sexo=prompt("Introduce el sexo para hombre(H,h) y para mujer (M,m): ");
+				if(sexo!="H" && sexo!="h" && sexo!="m" && sexo!="M")
+				{
+					alert("Sexo erróneo: "+sexo+ ". \n Teclea de nuevo.");
+					sexo=prompt("Introduce el sexo para hombre(H,h) y para mujer (M,m): ");
+				}
+			}
+			while(sexo!="H" && sexo!="h" && sexo!="m" && sexo!="M");
+
+			if(sexo=="H" || sexo=="h")
+			{
+				hombre=hombre + 1;
+			}
+			else
+			{
+				mujer=mujer + 1;
+			}
+			nota=parseInt(prompt("Introduce tu nota: ",0));
+			while(nota<0||nota>10)
+			{
+				alert("nota erronea");
+				nota=parseInt(prompt("Introduce tu nota: ",0));
+			}
+			suma_nota=suma_nota + nota;
+			suma_edad=suma_edad + edad;
+			cuenta=cuenta + 1;
+		}
+		media_edad=suma_edad/cuenta;
+		media_nota=suma_nota/cuenta;
+		document.write("La media de edad es: "+media_edad+" años");
+		document.write("</br>La media de las notas es: "+media_nota);
+		document.write("</br>El número de hombres es "+hombre+" y de mujeres es "+ mujer);
+	</script>
+</head> 
+</body>
+
+</body>
+</html>
